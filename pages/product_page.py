@@ -38,10 +38,6 @@ class ProductPage(BasePage):
         assert self.is_not_element_present(*ProductPageLocators.ADDED_TO_CART_MESSAGE), \
             "Success message is presented, but should not be"
 
-    def should_be_login_link(self):
-        assert self.is_element_present(*BasePageLocators.LOGIN_LINK), \
-            "Login link is not presented"
-
     def success_message_should_disappear(self):
         assert self.is_disappeared(*ProductPageLocators.ADDED_TO_CART_MESSAGE), \
             "Success message is presented, but should disappear"
