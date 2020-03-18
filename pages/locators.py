@@ -23,3 +23,9 @@ class ProductPageLocators():
     PRODUCT_NAME_IN_MESSAGE = (By.CSS_SELECTOR, ".alertinner :first-child")
     ADDED_TO_CART_MESSAGE = (By.CSS_SELECTOR, ".alertinner")
     CART_COST = (By.CSS_SELECTOR, ".alert-info .alertinner :nth-last-child(1)")
+
+class BasketPageLocators():
+	BASKET_LINK = (By.CSS_SELECTOR, '.btn-group .btn.btn-default[href$="basket/"]')
+	BASKET_LINK_INVALID = (By.CSS_SELECTOR, '.btn-group .btn.btn-default[href^="basket/"]')
+	MESSAGE_ABOUT_EMPTY = (By.CSS_SELECTOR, "div#content_inner p")
+	CHECKOUT_BUTTON = (By.CSS_SELECTOR, ".btn.btn-lg.btn-primary.btn-block")
