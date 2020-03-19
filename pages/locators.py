@@ -18,8 +18,7 @@ class LoginPageLocators():
     REG_EMAIL_INPUT = (By.CSS_SELECTOR, 'input[type="email"][name="registration-email"]')
     REG_PASSWORD_INPUT = (By.CSS_SELECTOR, 'input[type="password"][name="registration-password1"]')
     REG_REPEAT_PASSWORD = (By.CSS_SELECTOR, 'input[type="password"][name="registration-password2"]')
-    REGISTRATION_SUCCESSFUL_MESSAGE = (By.CSS_SELECTOR, 'alertinner.wicon')
-
+    REGISTRATION_SUCCESSFUL_MESSAGE = (By.CSS_SELECTOR, '.alertinner.wicon')
 
 class ProductPageLocators():
     ADD_TO_CART_BUTTON = (By.CSS_SELECTOR, ".btn-add-to-basket")

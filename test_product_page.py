@@ -68,19 +68,14 @@ def test_message_disappeared_after_adding_product_to_basket(browser):
 class TestUserAddToBasketFromProductPage():
     @pytest.fixture(scope="function", autouse=True)
     def setup(self,browser):
-        link = "http://selenium1py.pythonanywhere.com/"
+        link = "http://selenium1py.pythonanywhere.com/accounts/login/"
         email = str(time.time()) + "@fakemail.org"
         password =  'aBc'.join(str(time.time()).split('.'))
-        page = LoginPage(browser,link)
-        time.sleep(1)
-        page.open()
-        time.sleep(1)
-        page.go_to_login_page()
-        time.sleep(2)
-        page.register_new_user(email,password)
-        time.sleep(3)
-        page.should_be_authorized_user()
-        return page
+        print(email, password)
+        self.page = LoginPage(browser,link)
+        self.page.open()
+        self.page.register_new_user(email,password)
+        self.page.should_be_authorized_user()
 
     def test_user_cant_see_success_message(self, browser):
         link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
