@@ -7,14 +7,9 @@ from selenium.common.exceptions import NoAlertPresentException
 
 class ProductPage(BasePage):
     def add_to_cart(self):
-        # self.should_not_be_success_message()
         add_to_cart_button = self.browser.find_element(
             *ProductPageLocators.ADD_TO_CART_BUTTON)
         add_to_cart_button.click()
-        # self.solve_quiz_and_get_code()
-        # self.should_see_success_message()
-        # self.name_of_product_equal_to_name_in_success_message()
-        # self.cost_of_product_equal_to_cart_cost()
 
     def should_see_success_message(self):
         assert self.is_element_present(
