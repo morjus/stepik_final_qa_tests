@@ -15,8 +15,6 @@ class TestLoginFromMainPage():
         page.go_to_login_page()
         login_page = LoginPage(browser, browser.current_url)
         login_page.should_be_login_page()
-        login_page.name_of_product_equal_to_name_in_success_message()
-        login_page.cost_of_product_equal_to_cart_cost()
 
     def test_guest_should_see_login_link(self, browser):
         link = "http://selenium1py.pythonanywhere.com/"
