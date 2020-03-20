@@ -93,3 +93,5 @@ class TestUserAddToBasketFromProductPage():
         page = ProductPage(browser, link)
         page.open()
         page.add_to_cart()
+        page.name_of_product_equal_to_name_in_success_message()
+        page.cost_of_product_equal_to_cart_cost()
